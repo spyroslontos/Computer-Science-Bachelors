@@ -1,0 +1,38 @@
+Sorting non-zero elements within the method LoadEntries:
+
+For sorting the non-zero elements within the method LoadEntries we 
+had a worst-case complexity of O(N log N), N being the number of 
+non-zero elements. After searching through several algorithms I 
+have found that merge sort will always have a worst case complexity 
+of O(N log N) satisfying the requirement. Integrating merge sort was 
+relatively easy since I had used my previously made code from last 
+year and implemented the use of ArrayList<Entry> to sort using their 
+relative position. Merge sort is used by dividing the Array into two 
+halves and calls itself using the two halves, sorts them and merges 
+them together. To test the method, I used the MatrixInfo.txt which 
+uses 4 non-zero elements. This gives us a case complexity of O(4 log 4) 
+having a result of 2.408 so rounding up to the next integer gives us a 
+3, it being also the result of testing the merge sort method.
+
+Adding two matrices within the method add:
+
+For adding 2 sparse matrices the requirement for worst-case complexity 
+is O(N1 + N2) where N1 and N2 are the number of non-zero elements for 
+each operand matrix, respectively. The method uses a main while loop 
+that tries to iterate through all of the positions by using 2 values 
+to search through the indexes of the Arraylists and comparing their 
+positions adding the lowest one. If they have the same position their 
+values are summed and then added in the mat_sum ArrayList. It iterates 
+through all of the indexes of the smallest sized ArrayList. The remaining 
+indexes of the bigger sized ArrayList are added using the additional 2 
+while loops at the end of the method. This ensures that all of the non-zero 
+elements will be added in the mat_sum ArrayList. Testing for worst-case 
+I used the MatrixAdd1.txt and MatrixAdd2.txt which they have a worst-case 
+complexity of O (8 + 11) but the methods complexity is 15 satisfying the 
+requirement. For the code implemented its relative worst case scenario 
+would be if there are values in every other position for each SparseMatrix 
+eg. A(1,0,1,0,1,0,1,0,1) B(0,1,0,1,0,1,0,1,0). Their worst-case complexity 
+can be O(5 + 4) which equals 9. After testing with these examples the case 
+complexity my method provides is also a 9, satisfying the requirement.
+
+
