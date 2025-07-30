@@ -1,0 +1,243 @@
+1) 
+
+select stockno, description, price
+
+from stocks
+where price > 8
+
+order by price;
+
+
+
+2)
+
+select stockno, description, price, quantity, units
+
+from stocks
+
+where description like '%paper%'
+
+or description like '%pen%'
+or description like '%pencil%';
+
+
+
+3)
+
+select storecode, round(avg(price),2) "Average Price"
+
+from stocks
+
+group by storecode;
+
+
+
+4)
+
+select * from Stocks
+
+where (price between 10 and 20)
+
+and (not stockno in (117,118,120));
+
+
+
+5)
+
+select Suppname
+
+from Suppliers, Stocks
+
+where suppliers.suppcode = stocks.suppcode
+
+group by suppname
+
+having count(distinct storecode)>=3;
+
+
+
+6)
+
+Select SuppName "Supplier Name", 
+
+Replace(Street||', '||Town||', '||County||', '||PostCode, ', ,', ', ') as "Supplier Address"
+
+From Suppliers;
+
+
+
+7)
+
+select suppcode, suppname
+
+from suppliers
+
+where suppcode not in 
+
+(select suppcode
+from orders
+
+where orderno = 2);
+
+
+
+8)
+
+select stockNo, description, price, quantity
+
+from stocks
+
+where price > 
+(select avg(price) 
+from stocks) 
+and storecode = 'LEG';
+
+
+
+9)
+
+select stocks.stockno, stocks.description, orderitems.qtyord
+
+from stocks, orderitems
+
+where stocks.stockno = orderitems.stockno(+);
+
+
+
+10)
+
+select suppcode, suppname, postcode
+
+from suppliers
+
+where suppcode not in
+
+(select distinct(suppcode) 
+from stocks
+where price <
+
+(select avg(price)
+
+from stocks));
+
+
+
+11)
+
+/* Table formatting */
+
+
+
+clear screen;
+
+accept Report_File char prompt 'Enter a file name for summary report ';
+
+
+
+/* Column headers */
+
+
+col StoreCode format A11 heading 'Store Code';
+
+col Description format A23 heading 'Item Description';
+
+col Price format $99.99 heading 'Price'
+col Quantity format 9999999 heading 'Quantity';
+
+col (Price*Quantity) format $99999.99 heading 'Value';
+
+
+
+/* Formating and Titling pages */
+
+
+set Pause off;
+
+set Feedback off;
+
+set Space 8;
+
+set newpage 2;
+
+set pagesize 57;
+
+set linesize 91;
+
+set underline =;
+
+ttitle center 'Current Stock Value by Store' skip 2 left -
+
+'prepared by ' &Reporting_Officer right -
+&Todays_Date skip 4;
+
+btitle center format 999 SQL.PNO;
+
+
+
+/* Breaks and Computes */
+
+
+
+break on StoreCode skip 2 on Description skip 1 on Report;
+
+compute sum label 'Store Total' of (Price*Quantity) on StoreCode;
+
+compute sum label 'Grand Total' of (Price*Quantity) on Report;
+
+
+
+/* Selecting data & sending to file */
+
+
+
+spool &Report_File;
+
+
+
+select StoreCode, Description, Price, Quantity, (Price*Quantity)
+
+from Stocks
+
+order by StoreCode, Description;
+
+spool off;
+
+
+
+/* Clearing all settings */
+
+
+
+clear breaks;
+
+clear columns;
+
+clear computes;
+
+set Pause on;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
