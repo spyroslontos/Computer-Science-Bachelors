@@ -1,0 +1,74 @@
+body {	/* this applies to the body element, so to the whole document */
+	font-family: arial, sans-serif;
+	}
+
+h1 { 
+	font-size: 24pt; 
+	color: azure;
+	background-color: purple;
+	/* padding: 20pt 2pt; */
+	/* we can use either padding (above) or line-height (below)
+	   for vertical alignment; try experimenting with these */
+	line-height: 80pt;
+	font-weight: lighter;
+	}
+
+ul {
+	width:150px; /* otherwise the ul element would cover the entire
+			width of the page, so also the background colour of
+			its children li elements would cover the entire
+			width of the page; see what happens when leaving
+			this out */
+	font-size: 16pt;
+	list-style: none; /* this removes the bullets */
+	color: blue;
+	margin: 10px 0px; /* create some space above and below the menu 8 */
+	padding:0;
+	}
+
+li {
+	border-bottom: solid 1px white; /* create a thin white line
+					   seperating the menu items */
+	background-color: cyan;
+	padding-left:3px; 
+	}
+	
+ul li a {
+	text-decoration: none; /* get rid of the default underlining of links */
+	}
+
+ul li a:hover { /* when the mouse pointer moves over the link */
+	color: white;
+	}
+
+ul li a:active { /* when actually clicking on the link */
+	color: red;
+	}
+	
+table {
+	margin-top: 10px; /* create some space above the table */
+	border-collapse: collapse; /* remove the space between the cells */
+	/* background-color: rgb(250,235,215); */ /* antiquewhite */
+	width: 250px;
+	}
+td, th {
+	border: 1px solid blue; /* put borders on the table cells */
+	text-align:left;
+	}
+
+/*-------------------------------------------------------------*/
+
+fieldset {
+	width: 350px;
+}
+
+.Entries label {
+	display: block;
+	width: 80px ;
+	float: left;
+}
+
+input:focus {
+	background-color: palegreen;
+}
+

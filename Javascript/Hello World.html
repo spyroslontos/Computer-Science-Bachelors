@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Most basic JavaScript example</title>
+
+    <script type="text/javascript">
+
+        function helloWorld() {
+            inText = document.writeln("Hello World" .fontsize("18pt") .fontcolor("red"));
+            var theText = document.createTextNode(inText);
+            var para1 = document.createElement("p");
+            para1.appendChild(theText);
+            var theDiv = document.getElementById("mydiv");
+            theDiv.appendChild(para1);
+        }
+    </script>
+
+</head>
+
+<body onLoad="helloWorld()">
+<div id="mydiv">   </div>
+
+<noscript>
+    Your browser does not support JavaScript!
+</noscript>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #image {
+        position: fixed;
+        top: 300px;
+        left: 630px;
+        border-radius: 5px;
+    }
+
+    #header {
+        font-family: sans-serif;
+        text-align: center;
+        border-bottom:solid 2px black;
+        border-radius: 5px;
+        background: linear-gradient(to bottom, white, silver, lightgray);
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Can't Touch This</title>
+
+    <script>
+        function move() {
+            var xmove = Math.floor((Math.random() * 400) + 200);
+            var ymove = Math.floor((Math.random() * 400) + 200);
+
+            document.getElementById("image").style.left = xmove+"px";
+            document.getElementById("image").style.top = ymove+"px";
+
+        }
+
+        function myFunction() {
+            location.reload();
+        }
+
+    </script>
+
+</head>
+
+<body>
+<h1 id="header">Can't Touch This</h1>
+<button onclick="myFunction()">Refresh</button>
+
+
+<img id="image" onmouseover="move(this)" src="canttouchme.jpg"
+     alt="There is no way" width="150">
+
+
+</body>
+</html>

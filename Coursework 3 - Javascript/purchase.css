@@ -1,0 +1,57 @@
+body {
+	font-family: arial, sans-serif;
+	background-image: url("background_white.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	}
+
+h1 {
+	margin-left: 40px;
+	padding: 10px 10px 10px 15px;
+	background:linear-gradient(to bottom, deepskyblue, lightsteelblue, silver);
+	width: 350px;
+	border-radius: 5px;
+}
+
+img {
+	margin-top: 30px;
+	width: 350px;
+	border-radius: 5px;
+}
+
+#cart {
+	text-emphasis: none;
+	padding-left: 20px;
+}
+
+
+#form {
+	width: 350px;
+	padding: 20px;
+	float: left;
+}
+
+#exp {
+	margin-left: 30px;
+	width: 30px;
+	margin-top: 5px;
+	}
+
+#exp2 {
+	margin-left: 5px;
+	width: 45px;
+}
+
+#cvv2 {
+	margin-left: 30px;
+	width: 30px;
+	margin-top: 5px;
+}
+
+#submit {
+	margin-left: 50px;
+}
+
+#tip {
+	margin-left: 50px;
+}

@@ -1,0 +1,39 @@
+body {
+	font-family: arial, sans-serif;
+    background-image: url("background_white.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+	}
+
+h2 {
+    font-size: 17pt;
+    text-align: center;
+    width:420px;
+	background:linear-gradient(to bottom, mediumpurple, dimgrey, limegreen);
+	padding: 10pt 2pt;
+	line-height: 20pt;
+	font-weight: lighter;
+    border-radius: 10px;
+    margin-left: 20px;
+	}
+
+input {
+    margin: 6px 5px;
+}
+
+h3 {
+    background:linear-gradient(to bottom, mediumpurple, dimgrey, limegreen);
+    font-size: 16pt;
+    text-align: center;
+    width: 350px;
+    padding: 6pt 2pt;
+    line-height: 20pt;
+    font-weight: lighter;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 14pt;
+    margin-left: 15px;
+}

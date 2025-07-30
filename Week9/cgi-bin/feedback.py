@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+import cgi, cgitb 
+form = cgi.FieldStorage() 
+comments = form.getvalue('yourComments')
+howisit = form.getvalue('HowIsIt')
+print("Content-Type: text/html; charset=utf-8")
+print("")
+print("<!DOCTYPE html>")
+print("<html>")
+print("<head> <title> Python Script for feedback </title> </head>")
+print("<body>")
+print("<p>")
+print("Thank you for the following feedback: <br /> %s <br /><br />" % comments)
+print("We note that your view is: %s" % howisit)
+print("</p>")
+print("</body>")
+print("</html>")

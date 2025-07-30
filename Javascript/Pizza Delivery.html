@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    input {
+        width: 80px;
+    }
+    button {
+        margin-left: 12px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Delivery</title>
+
+    <script>
+        function toppings() {
+
+            document.getElementById("demo").innerHTML = "";
+            var ham = document.getElementById("ham").checked;
+            var bacon = document.getElementById("bacon").checked;
+            var mushrooms = document.getElementById("mushrooms").checked;
+            var salami = document.getElementById("salami").checked;
+            var pineapple = document.getElementById("pineapple").checked;
+
+            var materials = [ham,bacon,mushrooms,salami,pineapple];
+            var counter = 0;
+            for (var i = 0; i < materials.length; i++){
+                if(materials[i]===true) {
+                    counter += 1
+                }}
+            document.getElementById("demo").innerHTML = counter;
+
+
+            if (counter > 3){
+                document.getElementById("demo").innerHTML = "Please choose less toppings";
+            }
+
+            if (salami === true && pineapple===true){
+                document.getElementById("demo").innerHTML = "You can't choose those 2 together";
+                document.getElementById("salami").checked = false
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<h2>Choose Pizza Toppings</h2>
+
+
+    <input type="checkbox" class="ingredients" id="ham" value="ham">Ham<br />
+    <input type="checkbox" class="ingredients" id="bacon" value="bacon">Bacon<br />
+    <input type="checkbox" class="ingredients" id="mushrooms" value="mushrooms">Mushrooms<br />
+    <input type="checkbox" class="ingredients"  id="salami" value="salami">Salami<br />
+    <input type="checkbox" class="ingredients" id="pineapple" value="pineapple">Pineapple<br />
+    <br />
+
+    <button id="submit" value="Submit" onclick="toppings()">Order</button>
+
+    <br />
+<p id="demo"></p>
+</body>
+</html>

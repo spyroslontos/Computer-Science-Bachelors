@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function printvalues(){
+            var current_j =  getvalueById("current".fontsize(24))
+            var resistance_j =  getvalueById("resistance".fontsize(24));
+            var voltage_j =  getvalueById("voltage".fontsize(24));
+            document.writeln(current_j);
+            document.writeln(resistance_j);
+            document.writeln(voltage_j);
+        }
+
+    </script>
+</head>
+<body>
+<form id="submission" onsubmit="printvalues()">
+    <label for="current">
+        Enter Current(I):
+    </label>
+    <input type="number" id="current" name="Current" min="1" max="9999"/>
+    <label for="current">
+        Enter Resistance(R):
+    </label>
+    <input type="number" id="resistance" name="Resistance" min="1" max="9999"/>
+    <label for="current">
+        Enter Voltage(R):
+    </label>
+    <input type="number" id="voltage" name="Voltage" min="1" max="9999"/>
+
+
+
+</form>
+</body>
+</html>
