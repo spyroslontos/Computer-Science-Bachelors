@@ -1,0 +1,8 @@
+John,C123456,Maths,CM1234,14,Queens,Bristol,VM4QP
+Yiannis,C654324,English,CM9875,65e,Kostis,Manchester,QP6LK
+John,C123456,Maths,CM1234,14,Queens,Bristol,VM4QP
+Yiannis,C654324,English,CM9875,65e,Kostis,Manchester,QP6LK
+Bill,C89756,Physics,CM1232,12k,Ayyy,Bristol,CM4KE
+Andreas,C25362,Accounting,CM6532,12a,Dumfries,Bristol,QPAL
+Lambis,C8974,Physics,CM6841,19p,Levis,Leicester,QK8ZP
+Ethan,C428545,Maths,CM8544,19a,Queens,Cardiff,AI9WM
