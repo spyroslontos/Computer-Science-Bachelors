@@ -1,0 +1,138 @@
+body {	/* this applies to the body element, so to the whole document */
+	font-family: arial, sans-serif;
+	}
+
+h1 { 
+	font-size: 26pt;
+	color: azure;
+	background:linear-gradient(to bottom, green, darkgreen, darkgrey);
+	padding: 10pt 2pt;
+	/* we can use either padding (above) or line-height (below)
+	   for vertical alignment; try experimenting with these */
+	line-height: 20pt;
+	font-weight: lighter;
+    border-bottom: solid 10px black;
+    border-radius:5px;
+    z-index: 10;
+	}
+
+h1:hover {
+    background:linear-gradient(to bottom, forestgreen, limegreen, darkgrey);
+    transition:background 10s ease;
+    }
+
+ul {
+	/* width:150px; /* otherwise the ul element would cover the entire
+			width of the page, so also the background colour of
+			its children li elements would cover the entire
+			width of the page; see what happens when leaving
+			this out */
+	font-size: 16pt;
+	list-style-type: none; /* this removes the bullets */
+	color: blue;
+	margin: 20px 0; /* create some space above and below the menu 8 */
+	padding:0;
+	overflow: hidden;
+    border-radius:5px;
+    z-index:2;
+	}
+
+ul>li {
+	/*border-bottom: solid 1px white; !* create a thin white line*/
+					   /*seperating the menu items *!*/
+	background-color: #13be29;
+	padding:0;
+    float: left;
+    border-right: solid 3px grey;
+    background:linear-gradient(to bottom, green, limegreen);
+    z-index: 4;
+	}
+
+ul>li:nth-last-child(1) {
+    border-right:transparent;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    }
+
+.tooltip {  position:relative;
+    display:inline;
+    z-index: 5;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width:100px;
+    text-align: center;
+    padding: 5px 0;
+    color:black;
+    background:linear-gradient(to bottom, green, red);
+    font-size: 11px;
+    position: absolute;
+    border: solid 1px black;
+    border-radius:5px;
+    top:40%;
+    left:-5px;
+    z-index: 3;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    z-index:6;
+}
+
+
+ol {
+    width:110px;
+    list-style-type:none;
+    font-size:12pt;
+    margin: 10px 0;
+    color:red;
+    overflow: hidden;
+    }
+
+
+ol>li {
+    background-color: gold;
+    padding:5px;
+    text-align: center;
+	}
+
+ol li a {
+    text-decoration: none;
+    display: inline;
+    color:black;
+    }
+
+ul>li a {
+	text-decoration: none; /* get rid of the default underlining of links */
+	display: inline;
+    padding: 16px;
+    margin: 0;
+}
+
+ul>li a:hover { /* when the mouse pointer moves over the link */
+	color: white;
+	}
+
+ul>li a:active { /* when actually clicking on the link */
+	color: red;
+	}
+	
+table {
+    border:solid 2px black;
+    font-size: 16pt;
+	margin-top: 20px; /* create some space above the table */
+	border-collapse: collapse; /* remove the space between the cells */
+	background-color: rgb(250,235,215); /* antiquewhite */
+	width: 350px;
+	}
+
+td, th {
+	border-top-style: solid; /* put borders on the table cells */
+    text-align:center;
+    padding: 3px;
+	}
+
+tr:nth-child(even) {
+    background-color: gold;
+    }

@@ -1,0 +1,112 @@
+body {
+	font-family: arial, sans-serif;
+    background-image: url("babbage_engine.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+	}
+
+h1 { 
+	font-size: 27pt;
+    width:500px;
+	color: whitesmoke;
+	background:linear-gradient(to bottom, silver, dimgrey, darkgrey);
+	padding: 20pt 2pt;
+	line-height: 20pt;
+	font-weight: lighter;
+    border-radius: 7px;
+	}
+
+h1:hover {
+    background:linear-gradient(to bottom, dimgrey, darkslategray, darkgrey);
+    }
+
+.charlespic {
+    width: 300px;
+    float: right;  }
+
+.charlespic:hover {
+    opacity: 0.8;
+}
+
+img {
+    width:250px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-size: 100%;
+}
+
+p {
+    color:antiquewhite;
+    width:620px;
+    text-align: justify;  }
+
+ul {
+	list-style-type: none;
+	margin: 20px 0;
+	padding:0;
+	overflow: hidden;
+	}
+
+li {
+    float: left;
+    text-align: center;
+    position: relative;
+    background:linear-gradient(to bottom, silver, dimgrey, darkgrey);
+    margin-right: 5px;
+    border-radius:5px;
+	}
+
+li a {
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    color:whitesmoke;
+    width:120px;
+    height:40px;
+    line-height: 40px;
+}
+
+li a:hover {
+    color: limegreen;
+}
+
+li a:active {
+    color: darkred;
+}
+
+caption {
+    color:silver;
+    font-size: 18pt;
+}
+
+table {
+    border:solid 2px black;
+    font-size: 16pt;
+	margin: 15px 0;
+	border-collapse: collapse;
+	background-color: silver;
+	width: 500px;
+	}
+
+td, th {
+	border-style: groove;
+    text-align:center;
+    padding: 3px;
+	}
+
+td {
+    font-size: 11pt;
+}
+
+tr:nth-child(even) {
+    background-color: ghostwhite;
+    }
+
+.references {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    background:linear-gradient(to bottom, silver, dimgrey, darkgrey);
+    color:gold;
+}

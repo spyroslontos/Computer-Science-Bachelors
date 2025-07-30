@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Personal Web Site </title>
+<link rel="stylesheet" type="text/css" href="week09.css" />
+</head>
+
+<body>
+
+<h1> Reginald Mole: Feedback </h1>
+<hr />
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="interests.html">Interests</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+</ul>
+</nav>
+
+<div id="content">
+<img id="homePhoto" src="mole.jpg" alt="Reginald Mole Himself" width="100"/>
+
+<form method="post" action="cgi-bin/feedback.py" ><br />
+
+<fieldset class="Entries">
+    <label> Name: </label>
+        <input type="text" name="Name" size="20" required="required" placeholder="John"/> <br />
+    <label> Email: </label>
+        <input type="email" name="Email" required="required" placeholder="abcd12@mail.com"/> <br />
+    <label> Date: </label>
+        <input type="date" name="Date"  required="required" /> <br />
+    <label> URL: </label>
+    <input type="url" name="URL"  required="required" /> <br />
+    <label> Color: </label>
+    <input type="color" name="Color"  required="required" /> <br />
+    <label> Number: </label>
+    <input type="number" name="Number"  required="required" /> <br />
+    <label> Range: </label>
+    <input type="range" name="Range"  required="required" /> <br />
+
+</fieldset>
+
+<br />
+<label for="comments">Please share your thoughts with me</label><br />
+<textarea  name="yourComments" id="comments" cols="30" rows="5">Enter your comments here</textarea>
+<br /><br />
+In summary how would you put it?
+<br />
+<select name="HowIsIt" size="3" multiple>
+    <option value="Cool">Cool</option>
+    <option value="Could do better">Could do better</option>
+    <option value="The pits">The pits</option>
+</select><br />
+    <br />
+Things you like of the page?
+<br />
+<input type="checkbox" name="liked" id="colours" value="colours">The colours <br />
+<input type="checkbox" name="liked" id="pictures" value="pictures">The pictures <br />
+<input type="checkbox" name="liked" id="navigation" value="navigation">The navigation <br />
+<br />
+
+<input type="submit" 
+   value="Submit Your Comments" />
+</form>
+</div>
+
+</body>
+</html>
