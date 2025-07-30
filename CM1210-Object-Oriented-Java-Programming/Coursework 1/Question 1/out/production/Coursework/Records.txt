@@ -1,0 +1,7 @@
+John,C123456,Maths,CM1234,14,Queens,Bristol,VM4QP
+Yiannis,C654324,English,CM9875,65e,Kostis,Manchester,QP6LK
+Ethan,C428545,Maths,CM8544,19a,Queens,Cardiff,AI9WM
+Kostis,C654321,Physics,PH4512,31q,Dumfries,Surrey,JD7RA
+Oliver,C796431,Psychology,PS1201,61,Park,Leicester,MC3LS
+Jack,C693122,Accounting,AC1103,18b,Cedar,Swansea,MG4LE
+Thomas,C462137,Astronomy,AS4132,82c,Hill,Liverpool,SR8GE

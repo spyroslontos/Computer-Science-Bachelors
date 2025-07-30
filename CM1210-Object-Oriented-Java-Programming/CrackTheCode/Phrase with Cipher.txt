@@ -1,0 +1,45 @@
+phrase = NEPALSERBIASWITZERLANDBURKINAFASOKYRGYZSTANLUXEMBOURGSLOVAKIATAJIKISTANUGANDACHADANDAUSTRIA
+
+cipher = VAXETOANFQEOIQPLANTEVHFYNSQVEBEOWSKNCKLOPEVTYJAUFWYNCOTWZESQEPERQSQOPEVYCEVHEGDEHEVHEYOPNQE
+
+Alphabet > Cipher
+--------------------
+A > E
+B > F
+C > G
+D > H
+E > A
+F > B
+G > C
+H > D
+I > Q
+J > R
+K > S
+L > T
+M > U
+N > V
+O > W
+P > X
+Q > M
+R > N
+S > O
+T > P
+U > Y
+V > Z
+W > I
+X > J
+Y > K
+Z > L
+
+
+ALANDLOCKEDCOUNTRYISACOUNTRYTHATDOESNOTBORDERANOPENSEAEXAMPLESOFLANDLOCKEDCOUNTRIESINCLUDENEPAL
+SERBIASWITZERLANDBURKINAFASOKYRGYZSTANLUXEMBOURGSLOVAKIATAJIKISTANUGANDACHADANDAUSTRIA
+ADOUBLYLANDLOCKEDCOUNTRYISONETHATONLYBORDERSLANDLOCKEDCOUNTRIESTHEREAREONLYTWODOUBLYLANDLOCKEDCOUNTRIES
+INTHEWORLDONEOFTHEMISUZBEKISTANWHATISTHEOTHERONE
+
+A land locked Country is a Country that does not border an open sea. Examples of land locked countries
+include Nepal, Serbia, Switzerland, Burkina Faso, Kyrgistan, Luxembourg, Slovakia, Tatjikistan, Uganda, Chad 
+and Austria. A doubly land locked Country is one that only boarders land locked Countries. There are only two
+doubly land locked countries in the world, one of them is Uzbekistan. What is the other one?
+
+>> Liechtenstein
