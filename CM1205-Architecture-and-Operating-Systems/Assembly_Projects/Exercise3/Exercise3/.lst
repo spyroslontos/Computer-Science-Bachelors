@@ -1,0 +1,83 @@
+Microsoft (R) Macro Assembler (x64) Version 14.12.25835.0   02/22/18 12:59:18
+Example3.asm						     Page 1 - 1
+
+
+				; Calculate the value of X, given that
+				; X = 3*(10A - (B+2))/(A+B) - (B+2)
+				;
+				; (This isn't the only way to do this!)
+
+				.586p
+Example3.asm(6) : error A2008:syntax error : .
+				.model flat ,stdcall
+Example3.asm(7) : error A2008:syntax error : .
+ 00000000			.data
+
+				; Declare varA, varB and varX
+ 00000000 00				VarA	DB ?
+ 00000001 00				VarB	DB ?
+ 00000002 00				VarX	DB ?
+				; Some useful temporary variables
+ 00000003 00				Temp1	DB ?
+ 00000004 00				Temp2	DB ?
+				.stack
+Example3.asm(17) : error A2008:syntax error : .
+ 00000000			.code
+ 00000000			main PROC
+ 00000000  C6 05 00000000 R		MOV VarA, 4		; Assign initial values to A
+	   04
+ 00000007  C6 05 00000001 R		MOV VarB, 5		; and B (A=4, B=5)
+	   05
+
+				; First calculate (A+B) and store it in Temp1
+ 0000000E  8A 05 00000000 R		MOV AL, VarA
+ 00000014  02 05 00000001 R		ADD AL, VarB
+ 0000001A  88 05 00000003 R		MOV Temp1, AL
+				; Now calculate (B+2)
+ 00000020  8A 05 00000001 R		MOV AL, VarB
+ 00000026  88 05 00000004 R		MOV Temp2, AL
+ 0000002C  80 05 00000004 R		ADD Temp2, 2	; Temp2 = B+2
+	   02
+				; Now calculate 3*(10A - (B+2))
+ 00000033  8A 05 00000000 R		MOV AL, VarA
+ 00000039  B3 0A			MOV BL, 10		; Multiply A by 10
+ 0000003B  F6 E3			MUL BL
+ 0000003D  2A 05 00000004 R		SUB AL, Temp2		; Subtract (B+2)
+ 00000043  B3 03			MOV BL, 3		; Multiply the lot by 3
+ 00000045  F6 E3			MUL BL
+				; Can now divide by (A+B) and subtract (B+2)
+ 00000047  8A 1D 00000003 R		MOV BL, Temp1
+ 0000004D  B4 00			MOV AH, 0		; extend the byte in AL into AH
+ 0000004F  F6 F3			DIV BL			; before the division
+ 00000051  2A 05 00000004 R		SUB AL, Temp2		; Subtract (B+2)
+				; Finally, put the result in VarX
+ 00000057  88 05 00000002 R		MOV VarX, AL
+ 0000005D  90				NOP
+ 0000005E  90				NOP
+ 0000005F			main ENDP
+				END
+Microsoft (R) Macro Assembler (x64) Version 14.12.25835.0   02/22/18 12:59:18
+Example3.asm						     Symbols 2 - 1
+
+
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+main . . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 0000005F Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+Temp1  . . . . . . . . . . . . .	Byte	 00000003 _DATA	
+Temp2  . . . . . . . . . . . . .	Byte	 00000004 _DATA	
+VarA . . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+VarB . . . . . . . . . . . . . .	Byte	 00000001 _DATA	
+VarX . . . . . . . . . . . . . .	Byte	 00000002 _DATA	
+
+	   0 Warnings
+	   3 Errors

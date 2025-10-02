@@ -1,0 +1,5 @@
+﻿  Assembling Example3.asm...
+Example3.asm(6): error A2008: syntax error : .
+Example3.asm(7): error A2008: syntax error : .
+Example3.asm(17): error A2008: syntax error : .
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\BuildCustomizations\masm.targets(50,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\Example3.obj" /Fl".lst" /W3 /errorReport:prompt  /TaExample3.asm" exited with code 1.

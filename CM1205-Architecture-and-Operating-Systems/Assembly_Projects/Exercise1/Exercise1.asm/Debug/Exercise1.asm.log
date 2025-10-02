@@ -1,0 +1,2 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Exercise1.asm.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Exercise1.asm.vcxproj -> C:\Users\plays\Desktop\Year 1 Computer Science\CM1205 - Architecture and Operating Systems\Assembly Projects\Exercise1\Debug\Exercise1.exe

@@ -1,0 +1,4 @@
+﻿  Assembling template.asm...
+template.asm(31): error A2006: undefined symbol : ReadConsoleA
+template.asm(15): error A2009: syntax error in expression
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\BuildCustomizations\masm.targets(50,5): error MSB3721: The command "ml.exe /c /nologo /Zi /Fo"Debug\template.obj" /W3 /errorReport:prompt  /Tatemplate.asm" exited with code 1.

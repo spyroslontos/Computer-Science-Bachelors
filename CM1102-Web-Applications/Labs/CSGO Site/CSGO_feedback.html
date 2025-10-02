@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CSGO Site</title>
+<link rel="stylesheet" type="text/css" href="CSGO_style.css" />
+</head>
+
+<body>
+
+<h1>Feedback</h1>
+
+<nav>
+<ul>
+<li><a href="CSGO_home.html">Home</a></li>
+<li><a href=CSGO_weapons.html>Weapons</a></li>
+<li><a href="CSGO_feedback.html">Feedback</a></li>
+</ul>
+</nav>
+
+<div id="content">
+
+<form method="post" action="cgi-bin/feedback.py" ><br />
+
+<fieldset class="Entries">
+    <label> Username: </label>
+        <input type="text" name="Username" size="20" required="required" placeholder="xX_Faze LUL_xX"/> <br />
+    <label> Email: </label>
+        <input type="email" name="Email"  placeholder="abcd12@gmail.com"/> <br />
+    <label> Date Born: </label>
+        <input type="date" name="Date" /> <br />
+</fieldset>
+
+<br />
+<label for="comments">Share your thoughts</label><br />
+<textarea  name="yourComments" id="comments" cols="25" rows="5" placeholder="Enter your comments here"></textarea>
+<br /><br />
+
+<label>Rate It!</label>
+<br />
+<select name="rating" size="1" >
+    <option value="Amazing">Amazing</option>
+    <option value="Good" selected>Good</option>
+    <option value="Average">Average</option>
+    <option value="Bad">Bad</option>
+</select><br />
+    <br />
+
+<input type="submit" 
+   value="Submit" />
+</form>
+</div>
+
+</body>
+</html>

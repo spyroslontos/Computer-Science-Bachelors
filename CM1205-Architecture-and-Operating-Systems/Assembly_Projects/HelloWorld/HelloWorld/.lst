@@ -1,0 +1,82 @@
+Microsoft (R) Macro Assembler Version 14.12.25835.0	    02/19/18 18:25:24
+main.asm						     Page 1 - 1
+
+
+				.586
+				.model flat, stdcall
+				option casemap :none
+				.stack 4096
+				GetStdHandle  proto :dword
+				ExitProcess   proto, dwExitCode:dword
+				WriteConsoleA		  proto :dword, :dword, :dword, :dword, :dword
+				MessageBoxA   proto :dword, :dword, :dword, :dword
+
+ 00000000			.data
+ 00000000 54 65 73 74 20			msg_txt				db		"Test program",0
+	   70 72 6F 67 72
+	   61 6D 00
+ 0000000D 48 65 6C 6C 6F			msg_caption			db		"Hello World",0
+	   20 57 6F 72 6C
+	   64 00
+ =-0000000B					STD_OUTPUT_HANDLE	equ		-11
+ 00000019 00000000				outputHandle		DWORD	?
+ 0000001D 00000000				bytes_written		dd		?
+
+ 00000000			.code
+ 00000000					main proc
+						invoke GetStdHandle, STD_OUTPUT_HANDLE
+ 00000007  A3 00000019 R			mov outputHandle, eax
+						invoke WriteConsoleA,outputHandle, addr msg_caption, eax, addr bytes_written, 0
+						invoke MessageBoxA, outputHandle, addr msg_txt, addr msg_caption,0
+
+						invoke ExitProcess,0
+ 00000042					main endp
+				end main
+Microsoft (R) Macro Assembler Version 14.12.25835.0	    02/19/18 18:25:24
+main.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000021 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000042 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+GetStdHandle . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+MessageBoxA  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+WriteConsoleA  . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000042 Public STDCALL
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+STD_OUTPUT_HANDLE  . . . . . . .	Number	 -0000000Bh   
+bytes_written  . . . . . . . . .	DWord	 0000001D _DATA	
+msg_caption  . . . . . . . . . .	Byte	 0000000D _DATA	
+msg_txt  . . . . . . . . . . . .	Byte	 00000000 _DATA	
+outputHandle . . . . . . . . . .	DWord	 00000019 _DATA	
+
+	   0 Warnings
+	   0 Errors
