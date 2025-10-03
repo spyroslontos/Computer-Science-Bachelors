@@ -1,0 +1,45 @@
+Ran on a on my laptop without a charger (lower performance)
+double hybrid heuristic (distance + blockingCars)		      (2)
+triple hybrid heuristic (distance + blockingCars + blockingofBlocked) (3)
+
+
+	time | nodes expanded | cost
+
+(2) random1.txt 282 95 6
+(3) random1.txt 132 71 6
+
+(2) random2.txt 138 72 6
+(3) random2.txt 39 20 6
+
+(2) random3.txt 48 7 4
+(3) random3.txt 36 5 4
+
+(2) random4.txt 28097 17373 12
+(3) random4.txt 18423 11871 12
+
+(2) random5.txt 2268 1581 8
+(3) random5.txt 941 389 9
+
+(2) random6.txt 2313 1230 11
+(3) random6.txt 450 126 11
+
+(2) random7.txt 3005 1625 10
+(3) random7.txt 2603 1370 10
+
+(2) random8.txt 20014 13278 12
+(3) random8.txt 6998 4882 12
+
+(2) random9.txt 2895 1505 14
+(3) random9.txt 1398 630 14
+
+(2) random10.txt 4202 2453 13
+(3) random10.txt 3870 1903 13
+
+(2) random11.txt 99892 71499 16
+(3) random11.txt 35876 30116 16
+
+(2) random12.txt 519 349 20
+(3) random12.txt 498 349 20
+
+(2) random13.txt 100963 82671 26
+(3) random13.txt 54185 48280 26

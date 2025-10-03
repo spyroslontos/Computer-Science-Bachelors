@@ -1,0 +1,87 @@
+% **********************************************
+% Possible ways to move a single man
+% **********************************************
+
+% His wife is already on the right side
+moveManRight1 :: left(X), man(X), right(Y), married(X,Y), left(boat) => right(X), right(boat), not left(X), not left(boat).
+
+% His wife remains on the left side but only in the presence of women
+moveManRight2 :: left(X), man(X), right(Y), man(Y), right(Z), man(Z), diff(Y,Z), left(boat) => right(X), right(boat), not left(X), not left(boat).
+
+% His wife is already on the left side
+moveManLeft1 :: right(X), man(X), left(Y), married(X,Y), right(boat) => left(X), left(boat), not right(X), not right(boat).
+
+% His wife remains on the right side but only in the presence of women
+moveManLeft2 :: right(X), man(X), left(Y), man(Y), left(Z), man(Z), diff(Y,Z), right(boat) => left(X), left(boat), not right(X), not right(boat).
+
+% **********************************************
+% Possible ways to move a single woman
+% **********************************************
+
+moveWomanRight1 :: left(X), woman(X), right(Y), married(Y,X), left(boat) => right(X), right(boat), not left(X), not left(boat).
+
+moveWomanRight2 :: left(X), woman(X), left(Y), man(Y), left(Z), man(Z), left(U), man(U), diff(Y,Z), diff(Z,U), diff(Y,Z), left(boat) => right(X), right(boat), not left(X), not left(boat).
+
+moveWomanLeft1 :: right(X), woman(X), left(Y), married(Y,X), right(boat) => left(X), left(boat), not right(X), not right(boat).
+
+moveWomanLeft2 :: right(X), woman(X), right(Y), man(Y), right(Z), man(Z), right(U), man(U), diff(Y,Z), diff(Z,U), diff(Y,Z), right(boat) => left(X), left(boat), not right(X), not right(boat).
+
+% **********************************************
+% Possible ways to move a man and a woman
+% **********************************************
+
+moveManWomenRight :: left(X), man(X), left(Y), married(X,Y), left(boat) => right(X), right(Y), right(boat), not left(X), not left(Y), not left(boat).
+
+moveManWomenLeft :: right(X), man(X), right(Y), married(X,Y), right(boat) => left(X), left(Y), left(boat), not right(X), not right(Y), not right(boat).
+
+
+% **********************************************
+% Possible ways to move two men
+% **********************************************
+
+moveManManRight1 :: left(X), man(X), left(Y), man(Y), left(boat), right(U), married(X,U), right(V), married(Y,V) => right(X), right(Y), right(boat), not left(X), not left(Y), not left(boat).
+
+moveManManRight2 :: left(X), man(X), left(Y), man(Y), right(Z), man(Z), diff(X,Y), left(boat) => right(X), right(Y), right(boat), not left(X), not left(Y), not left(boat).
+
+moveManManLeft1 :: right(X), man(X), right(Y), man(Y), right(boat), left(U), married(X,U), left(V), married(Y,V) => left(X), left(Y), left(boat), not right(X), not right(Y), not right(boat).
+
+moveManManLeft2 :: right(X), man(X), right(Y), man(Y), left(Z), man(Z), diff(X,Y), right(boat) => left(X), left(Y), left(boat), not right(X), not right(Y), not right(boat).
+
+
+% **********************************************
+% Possible ways to move two women
+% **********************************************
+
+moveWomanWomanRight1 :: left(X), woman(X), left(Y), woman(Y), diff(X,Y), right(U), married(U,X), right(V), married(V,Y), left(boat) => right(X), right(Y), right(boat), not left(X), not left(Y), not left(boat).
+
+moveWomanWomanRight1 :: left(X), woman(X), left(Y), woman(Y), diff(X,Y), left(U), man(Y), left(V), man(V), left(W), man(W), diff(U,V), diff(V,W), diff(U,W), left(boat) => right(X), right(Y), right(boat), not left(X), not left(Y), not left(boat).
+
+left(m1).
+left(m2).
+left(m3).
+left(w1).
+left(w2).
+left(w3).
+left(boat).
+man(m1).
+man(m2).
+man(m3).
+woman(w1).
+woman(w2).
+woman(w3).
+married(m1,w1).
+married(m2,w2).
+married(m3,w3).
+diff(m1,m2).
+diff(m2,m3).
+diff(m1,m3).
+diff(w1,w2).
+diff(w2,w3).
+diff(w1,w3).
+
+goal right(m1).
+goal right(m2).
+goal right(m3).
+goal right(w1).
+goal right(w2).
+goal right(w3).

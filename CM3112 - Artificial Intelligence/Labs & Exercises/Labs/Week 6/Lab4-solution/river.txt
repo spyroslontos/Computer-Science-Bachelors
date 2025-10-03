@@ -1,0 +1,21 @@
+moveRight1 :: left(X), person(X), left(boat) => right(X), right(boat), not left(X), not left(boat).
+moveLeft1 :: right(X), person(X), right(boat) => left(X), left(boat), not right(X), not right(boat).
+moveRight2 :: left(X), left(Y), child(X), child(Y), left(boat) => right(X), right(Y), right(boat), not left(X), not left(Y), not left(boat).
+moveLeft2 :: right(X), right(Y), child(X), child(Y), right(boat) => left(X), left(Y), left(boat), not right(X), not right(Y), not right(boat).
+
+left(a).
+left(b).
+left(c).
+left(d).
+child(a).
+child(b).
+person(a).
+person(b).
+person(c).
+person(d).
+left(boat).
+
+goal right(a).
+goal right(b).
+goal right(c).
+goal right(d).
